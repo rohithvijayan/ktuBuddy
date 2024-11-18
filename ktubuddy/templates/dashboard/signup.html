@@ -1,0 +1,37 @@
+{% extends "dashboard/home.html" %}
+{% load static %}
+<title>KTUBuddy - Education Learning Platform</title>
+{% block style %}
+<link rel="stylesheet" href="{% static './css/register.css' %}">
+{% endblock style %}
+{% block heading %}
+<h1 id='register-heading'>Register with KTUBuddy</h1>
+{% endblock heading %}
+{% block content %}
+<section class="form-section">
+    <form class="form" method="POST" action='{% url "signup" %}'>
+        {% csrf_token %}
+        <p class="title">Register </p>
+        <p class="message">Signup now and get full access to our app. </p>
+            <label>
+                <input required="" placeholder="" type="text" class="input" name="name">
+                <span>Enter Username</span>
+            </label>     
+        <label>
+            <input required="" placeholder="" type="email" class="input" name="email">
+            <span>Email</span>
+        </label> 
+            
+        <label>
+            <input required="" placeholder="" type="password" class="input" name="password">
+            <span>Password</span>
+        </label>
+        <label>
+            <input required="" placeholder="" type="password" class="input" name="re-password">
+            <span>Confirm password</span>
+        </label>
+        <button class="submit" type="submit">Submit</button>
+        <p class="signin">Already have an acount ? <a href="{% url 'login' %}">Signin</a> </p>
+    </form>
+</section>
+{% endblock content %}

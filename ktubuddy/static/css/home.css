@@ -1,0 +1,217 @@
+/* General Styles */
+*{margin: 0;padding: 0  ;box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*no scroll bar scrolling */
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #D6E8EE;
+    color: #001B48;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #02457A;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+    color: white;
+}
+
+.navbar .branding {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.navbar h2 a{text-decoration: none;color: white;
+}
+.navbar .nav-buttons .nav-btn {
+    margin-left: 1rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #018ABE;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-buttons .nav-btn.register {
+    background-color: #02457A;
+}
+
+.navbar .nav-buttons .nav-btn:hover {
+    background-color: #d3e0dd;
+    color: #252121;
+}
+.nav-btn a{text-decoration: none; color: white;padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: #02457A;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    height: 28vh;
+}
+
+.hero-content {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    object-fit: fill;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 6rem;
+    margin-top: -100px;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    width: 150px;
+    height: 60px;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #018ABE;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #97CABD;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* FEATURES */
+#features-section{background-color: #dadcdd;display: flex;flex-direction: column;flex-wrap: wrap;align-items: center;justify-content:center;text-align: center;}
+.features-cards{display: flex;flex-direction: row;gap: 5vh;justify-content: space-evenly;align-items: center;}
+.features {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #D6E8EE;
+    color: #001B48;
+    
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.features-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 250px;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    justify-content: space-evenly;
+    &:hover{box-shadow:2px 5px 20px 10px #252121;transform: scale(1.1);-webkit-transition: transform 0.3s ease-in-out;
+    }
+
+}
+
+.features-card p {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.features-card span {
+    font-weight: bold;
+    color: #018ABE;
+}
+
+/* Testimonials Section */
+.testimonials {
+    display: flex;
+    flex-direction: row;display: flex;flex-direction: column;flex-wrap: wrap;align-items: center;justify-content:center;text-align: center;
+    padding: 3rem 2rem;
+    background-color: #cfd0d1;
+    color: #001B48;
+    
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.testimonial-cards{display: flex;flex-direction: row;gap: 10vh;}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 250px;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    justify-content: space-evenly;
+    &:hover{box-shadow:2px 5px 20px 10px #252121;transform: scale(1.1);-webkit-transition: transform 0.3s ease-in-out;
+    }
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card span {
+    font-weight: bold;
+    color: #018ABE;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #001B48;
+    color: white;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTUBuddy - Education Learning Platform</title>
+    <link rel="stylesheet" href=" {% static './css/home.css' %} ">
+    {% block style %}{% endblock style %}
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="branding"><h2><a href="{% url 'home' %}">KTUBuddy</a></h2></div>
+        <div class="nav-buttons">
+            <a href='{% url "login" %}'> <button class="nav-btn" type="button">Login</button></a>
+            <a href='{% url "signup" %}'><button class="nav-btn register" type="button">Register</button></a>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            {% block heading %}
+            <h1>KTUBuddy</h1>
+            <p>Now Makes it easy to crack exams!</p>
+            {% endblock heading %}
+            <button class="hero-btn">Get Started</button>
+        </div>
+        
+    </section> 
+    {% block content %}
+    <!-- Features Section -->
+    <section class="features" id="features-section">
+        <div class='feature-heading'>
+            <h2>Features</h2>
+         </div>
+        <div class="features-cards">
+            <div class="features-card">
+                <h2>Quick Notes</h2>
+                <span>Short Notes For Faster Study</span>
+            </div>
+            <div class="features-card">
+                <h2>Chat With Notes</h2>
+                <span>Learn By Having A Chat With Your Notes</span>
+            </div>
+            <div class="features-card">
+                <h2>Crack'em!</h2>
+                <span>Generate The Most Important QnA for Exams!</span>
+            </div>
+        </div>
+
+    </section>
+    <!-- Testimonial Section -->
+    <section class="testimonials">
+        <div class="testimonial-heading">
+            <h2>What Our Users Say</h2>
+        </div>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <p>"KTUBuddy has been a game changer for my study routine!"</p>
+                <span>- Alex Johnson</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"The resources here are incredibly helpful. Passed with flying colors!"</p>
+                <span>- Priya Sharma</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"I love how everything is so well-organized and easy to understand."</p>
+                <span>- Mark Williams</span>
+            </div>
+        </div>
+
+    </section>   
+    {% endblock content %}
+    <!-- Hero Section -->
+
+
+    <!-- Footer -->
+    <!-- --
+    <footer class="footer">
+        <p>&copy; 2024 KTUBuddy. All rights reserved.</p>
+    </footer>
+    <---->
+    <script src='{% static "./js/home.js" %}'></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+body{background-color:white ;}
+.form-section{width: 60%;
+
+    height: 60vh;
+display: flex
+;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+margin: auto;
+}
+.hero-btn{display: none;}
+
+/* form */
+   .card {
+        width: 400px;
+        height: 300px;
+        border-radius: 10px;
+        background: #02457A;;
+        border: 1px solid white;
+        color: white;
+        box-shadow: 10px 10px 64px 0px rgba(180, 180, 207, 0.75);
+        -webkit-box-shadow: 10px 10px 64px 0px rgba(186, 186, 202, 0.75);
+        -moz-box-shadow: 10px 10px 64px 0px rgba(208, 208, 231, 0.75);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+    }
+    
+    .form {
+        padding: 25px;
+    }
+    
+    .card_header {
+        display: flex;
+        align-items: center;
+    }
+    
+    .card svg {
+        color: #ffffff;
+        margin-bottom: 20px;
+        margin-right: 5px;
+    }
+    
+    .form_heading {
+        padding-bottom: 20px;
+        font-size: 21px;
+        color: #ffffff;
+    }
+    
+    .field {
+        padding-bottom: 10px;
+
+    }
+    #btnfield{margin-left: auto;
+        margin-right: auto;}
+    
+    .input {
+        border-radius: 5px;
+        background-color: #e9e9f7;
+        padding: 10px;
+        width: 100%;
+        color: #000000;
+        border: 1px solid #dadaf7
+    }
+    
+    .input:focus-visible {
+        outline: 1px solid #000000;
+    }
+    
+    .input::placeholder {
+        color: #302e2e;
+    }
+    
+    label {
+        color: #ffffff;
+        font-size: 14px;
+        display: block;
+        padding-bottom: 4px;
+    }
+    
+    button {
+        background-color: #ebebeb;
+        margin-top: 10px;
+        font-size: 14px;
+        padding: 15px 20px;
+        border-radius: 5px;
+        height: auto;
+        font-size: medium;
+        font-weight: 900;
+        color: rgb(0, 0, 0);
+        border: none;
+    }
+    
+    button:hover {
+        background-color: #353532;color: #ffffff;
+    }
+/*-----------------------------------------------------*/
