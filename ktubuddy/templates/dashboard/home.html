@@ -13,8 +13,18 @@
     <nav class="navbar">
         <div class="branding"><h2><a href="{% url 'home' %}">KTUBuddy</a></h2></div>
         <div class="nav-buttons">
+            {% if user.is_authenticated %}
+            <div class="user-display">
+                <h2>Welcome {{user.get_username}}</h2>
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="LogOut" id="logout-btn">
+                </form>
+            </div>
+            {% else %}
             <a href='{% url "login" %}'> <button class="nav-btn" type="button">Login</button></a>
             <a href='{% url "signup" %}'><button class="nav-btn register" type="button">Register</button></a>
+            {% endif %}
         </div>
     </nav>
     <section class="hero">
